@@ -22,24 +22,24 @@ if YT_COOKIES := environ.get("YT_COOKIES"):
     else:
         LOGGER.info("Failed download YT Cookies")
 
-if API_ID := environ.get("API_ID", ""):
+if API_ID := environ.get("API_ID", "27395063"):
     API_ID = int(API_ID)
 else:
     LOGGER.error("API_ID variable is missing! Exiting now")
     sys.exit(1)
-API_HASH = environ.get("API_HASH", "")
+API_HASH = environ.get("API_HASH", "039a56230f6a937b80b19c631d73a63d")
 if not API_HASH:
     LOGGER.error("API_HASH variable is missing! Exiting now")
     sys.exit(1)
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "8249595356:AAHioRxWDXcdZHw0aVAHGd6yAwlJTblrY6A")
 if not BOT_TOKEN:
     LOGGER.error("BOT_TOKEN variable is missing! Exiting now")
     sys.exit(1)
-DATABASE_URI = environ.get("DATABASE_URI", "")
+DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://agegnewualemayehu03_db_user:NZc3JLsB6s08Zrto@cluster0.mquklfn.mongodb.net/")
 if not DATABASE_URI:
     LOGGER.error("DATABASE_URI variable is missing! Exiting now")
     sys.exit(1)
-if LOG_CHANNEL := environ.get("LOG_CHANNEL", ""):
+if LOG_CHANNEL := environ.get("LOG_CHANNEL", "-1003119656945"):
     LOG_CHANNEL = int(LOG_CHANNEL)
 
 else:
@@ -48,7 +48,7 @@ else:
 # Optional ENV
 LOG_GROUP_ID = environ.get("LOG_GROUP_ID")
 USER_SESSION = environ.get("USER_SESSION")
-DATABASE_NAME = environ.get("DATABASE_NAME", "MissKatyDB")
+DATABASE_NAME = environ.get("DATABASE_NAME", "agegnewualemayehu03_db_user")
 TZ = environ.get("TZ", "Asia/Jakarta")
 PORT = environ.get("PORT", 80)
 COMMAND_HANDLER = environ.get("COMMAND_HANDLER", "! /").split()
@@ -61,8 +61,8 @@ SUDO = list(
         ).split()
     }
 )
-OWNER_ID = int(environ.get("OWNER_ID", 2024984460))
-SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "YasirPediaChannel")
+OWNER_ID = int(environ.get("OWNER_ID", 8250489814))
+SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "Elabcode")
 AUTO_RESTART = environ.get("AUTO_RESTART", False)
 OPENAI_KEY = environ.get("OPENAI_KEY")
 GOOGLEAI_KEY = environ.get("GOOGLEAI_KEY")
@@ -76,13 +76,13 @@ FORWARD_FROM_CHAT_ID = list(
         int(x)
         for x in environ.get(
             "FORWARD_FROM_CHAT_ID",
-            "-1001128045651 -1001455886928 -1001686184174",
+            "-1003119656945 -1001455886928 -1001686184174",
         ).split()
     }
 )
 # Forward To Chat ID
 FORWARD_TO_CHAT_ID = list(
-    {int(x) for x in environ.get("FORWARD_TO_CHAT_ID", "-1001210537567").split()}
+    {int(x) for x in environ.get("FORWARD_TO_CHAT_ID", "-1003119656945").split()}
 )
 FORWARD_FILTERS = list(set(environ.get("FORWARD_FILTERS", "video document").split()))
 BLOCK_FILES_WITHOUT_EXTENSIONS = bool(
